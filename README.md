@@ -13,3 +13,16 @@ This script analyses an Nginx access log to determine appropriate rate limit set
 ## Usage
 
 ```python3 rate.py /var/log/nginx/access.log```
+
+## Example Output
+
+```
+Request rate distribution:
+1 requests/second: 2 IPs
+2 requests/second: 1 IPs
+12 requests/second: 1 IPs
+
+Suggested rate limit settings:
+Rate limit: 6 requests/second
+Burst capacity: 14 requests
+```
